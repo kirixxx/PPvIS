@@ -1,0 +1,108 @@
+<?xml version="1.0" ?>
+<table title="table_example">
+	<columns>
+		<column title="Faculty" type_of_data="str"/>
+		<column title="Department" type_of_data="str"/>
+		<column title="FCs" type_of_data="str"/>
+		<column title="Academic_title" type_of_data="str"/>
+		<column title="Academic_degree" type_of_data="str"/>
+		<column title="Work_experience" type_of_data="int"/>
+	</columns>
+	<records>
+		<record>
+			<element Faculty="FCD"/>
+			<element Department="DEaCG"/>
+			<element FCs="Stepanov V.V."/>
+			<element Academic_title="Doctor of Sciences"/>
+			<element Academic_degree="Professor"/>
+			<element Work_experience="14"/>
+		</record>
+		<record>
+			<element Faculty="FCD"/>
+			<element Department="DEaCG"/>
+			<element FCs="Starostin P.D."/>
+			<element Academic_title="Doctor of Sciences"/>
+			<element Academic_degree="Professor"/>
+			<element Work_experience="21"/>
+		</record>
+		<record>
+			<element Faculty="FCD"/>
+			<element Department="DEPaE"/>
+			<element FCs="Karachun V.V."/>
+			<element Academic_title="Doctor of Sciences"/>
+			<element Academic_degree="Professor"/>
+			<element Work_experience="13"/>
+		</record>
+		<record>
+			<element Faculty="FCD"/>
+			<element Department="DEPaE"/>
+			<element FCs="Rassafonov K.V."/>
+			<element Academic_title="Candidate of Sciences"/>
+			<element Academic_degree="Professor"/>
+			<element Work_experience="16"/>
+		</record>
+		<record>
+			<element Faculty="FCD"/>
+			<element Department="DFL"/>
+			<element FCs="Lisov K.V."/>
+			<element Academic_title="Doctor of Sciences"/>
+			<element Academic_degree="Professor"/>
+			<element Work_experience="16"/>
+			
+		</record>
+		<record>
+			<element Faculty="FCD"/>
+			<element Department="DFL"/>
+			<element FCs="Dranchuk S.R."/>
+			<element Academic_title="Candidate of Sciences"/>
+			<element Academic_degree="Docent"/>
+			<element Work_experience="17"/>
+			
+		</record>
+		<record>
+			<element Faculty="FCD"/>
+			<element Department="DIaCSD"/>
+			<element FCs="Dyatel K.R."/>
+			<element Academic_title="Doctor of Sciences"/>
+			<element Academic_degree="Senior researcher"/>
+			<element Work_experience="5"/>
+			
+		</record>
+		<record>
+			<element Faculty="FITM"/>
+			<element Department="DCMaP"/>
+			<element FCs="Seledcov K.R."/>
+			<element Academic_title="Candidate of Sciences"/>
+			<element Academic_degree="Senior researcher"/>
+			<element Work_experience="8"/>
+			
+		</record>
+		<record>
+			<element Faculty="FITM"/>
+			<element Department="DCMaP"/>
+			<element FCs="Popuskov L.S."/>
+			<element Academic_title="Doctor of Sciences"/>
+			<element Academic_degree="Junior researcher"/>
+			<element Work_experience="10"/>
+			
+		</record>
+		<record>
+			<element Faculty="FITM"/>
+			<element Department="DH"/>
+			<element FCs="Soldatenkov P.S."/>
+			<element Academic_title="Doctor of Sciences"/>
+			<element Academic_degree="Docent"/>
+			<element Work_experience="10"/>
+			
+		</record>
+		<record>
+			<element Faculty="FITM"/>
+			<element Department="DH"/>
+			<element FCs="Sobranof T.S."/>
+			<element Academic_title="Doctor of Sciences"/>
+			<element Academic_degree="Senior researcher"/>
+			<element Work_experience="11"/>
+			
+		</record>
+	</records>
+</table>
