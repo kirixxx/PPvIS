@@ -228,7 +228,6 @@ class World:
 
     def life_cycle(self):
         self.weather.weather_today(self)
-        #self.sert.want_to_water_plants(self)
         self.plants_grow_up()
         self.trees_grow_up()
         self.eat_plant_on_map()
@@ -247,7 +246,7 @@ class World:
         file.close()
 
     def plants_info(self, position_x: int, position_y: int, position_z: int):
-        self.sert.plants_info(self, position_x, position_y, position_z)
+        return self.sert.plants_info(self, position_x, position_y, position_z)
        
     def delete_pest_from_garden(self):
         for pests in self.plants:

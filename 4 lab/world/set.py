@@ -77,29 +77,40 @@ class Sert():
     def plants_info(self, garden, position_x: int, position_y: int, position_z: int):
         x = int(position_x)
         y = int(position_y)
+        info_list = list()
         count = int(position_z)
         if int(count) <= len(garden.game_map[x][y].all_in_cell):
             name = garden.game_map[x][y].all_in_cell[count].name
             print("name:" + name)
+            info_list.append("name:" + name)
             age = garden.game_map[x][y].all_in_cell[count].age
             print("age:" + str(age))
+            info_list.append("age:" + str(age))
             life_points = garden.game_map[x][y].all_in_cell[count].life_points
             print("life points:" + str(life_points))
+            info_list.append("life points:" + str(life_points))
             weed = garden.game_map[x][y].all_in_cell[count].weed
             print("weed: " + str(weed))
+            info_list.append("weed: " + str(weed))
             if int(garden.game_map[x][y].all_in_cell[count].type_id) == 1 or int(garden.game_map[x][y].all_in_cell[count].type_id) == 3:
                 points_to_grow = garden.game_map[x][y].all_in_cell[count].start_points
                 print("points to grow up :" + str(points_to_grow))
+                info_list.append("points to grow up :" + str(points_to_grow))
                 illness = garden.game_map[x][y].all_in_cell[count].illness
                 print("illness :" + str(illness))
+                info_list.append("illness :" + str(illness))
                 watered = garden.game_map[x][y].all_in_cell[count].watered
                 print("watered :" + str(watered))
+                info_list.append("watered :" + str(watered))
             if int(garden.game_map[x][y].all_in_cell[count].type_id) == 2:
                 damage = garden.game_map[x][y].all_in_cell[count].damage
                 print("damage :" + str(damage))
+                info_list.append("damage :" + str(damage))
                 hungry = garden.game_map[x][y].all_in_cell[count].hungry
                 print("hungry:" + str(hungry))
+                info_list.append("hungry:" + str(hungry))
             print("-------------------------------------------")
+            return info_list
         else:
             raise (print("Wrong coordinates <<z>>"))
        

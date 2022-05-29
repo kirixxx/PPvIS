@@ -17,6 +17,7 @@ class App:
         self.state = 'start'
         self.garden = None
         self.controller = Controller()
+        self.info_list = list()
 
     def run(self):
         while self.running:
@@ -105,7 +106,7 @@ class App:
                     carrot.set_colorkey(WHITE)
                     self.screen.blit(carrot, (20 + count_c, coord_y_0_0))
                 if plant.weed:
-                    weed = pygame.image.load("images/trava.png")
+                    weed = pygame.image.load("images/grass.png")
                     weed.set_colorkey(WHITE)
                     self.screen.blit(weed, (20 + count_c, coord_y_0_0 + 30))
                 if plant.illness:
@@ -163,7 +164,7 @@ class App:
                     carrot.set_colorkey(WHITE)
                     self.screen.blit(carrot, (20 + count_c, coord_y_0_0- 50))
                 if plant.weed:
-                    weed = pygame.image.load("images/trava.png")
+                    weed = pygame.image.load("images/grass.png")
                     weed.set_colorkey(WHITE)
                     self.screen.blit(weed, (20 + count_c, coord_y_0_0 + 35))
                 if plant.illness:
@@ -196,7 +197,7 @@ class App:
                     carrot.set_colorkey(WHITE)
                     self.screen.blit(carrot, (20 + count_c, coord_y_0_1))
                 if plant.weed:
-                    weed = pygame.image.load("images/trava.png")
+                    weed = pygame.image.load("images/grass.png")
                     weed.set_colorkey(WHITE)
                     self.screen.blit(weed, (20 + count_c, coord_y_0_1 + 30))
                 if plant.illness:
@@ -254,7 +255,7 @@ class App:
                     carrot.set_colorkey(WHITE)
                     self.screen.blit(carrot, (20 + count_c, coord_y_0_1- 50))
                 if plant.weed:
-                    weed = pygame.image.load("images/trava.png")
+                    weed = pygame.image.load("images/grass.png")
                     weed.set_colorkey(WHITE)
                     self.screen.blit(weed, (20 + count_c, coord_y_0_1 + 35))
                 if plant.illness:
@@ -749,8 +750,7 @@ class App:
                              hoverColour=BLUE,
                              pressedColour=BLUE,
                              onClick=self.button_check_info)
-        
-    info_list = []    
+            
     def button_check_info(self):
         self.info_list = self.controller.plants_info(int(self.coords[0]),int(self.coords[1]),int(self.index))
         self.state = "check_info"
@@ -802,7 +802,7 @@ class App:
                     carrot.set_colorkey(WHITE)
                     self.screen.blit(carrot, (20 + count_c, coord_y_0_0))
                 if plant.weed:
-                    weed = pygame.image.load("images/trava.png")
+                    weed = pygame.image.load("images/grass.png")
                     weed.set_colorkey(WHITE)
                     self.screen.blit(weed, (20 + count_c, coord_y_0_0 + 30))
                 if plant.illness:
@@ -860,7 +860,7 @@ class App:
                     carrot.set_colorkey(WHITE)
                     self.screen.blit(carrot, (20 + count_c, coord_y_0_0- 50))
                 if plant.weed:
-                    weed = pygame.image.load("images/trava.png")
+                    weed = pygame.image.load("images/grass.png")
                     weed.set_colorkey(WHITE)
                     self.screen.blit(weed, (20 + count_c, coord_y_0_0 + 35))
                 if plant.illness:
@@ -893,7 +893,7 @@ class App:
                     carrot.set_colorkey(WHITE)
                     self.screen.blit(carrot, (20 + count_c, coord_y_0_1))
                 if plant.weed:
-                    weed = pygame.image.load("images/trava.png")
+                    weed = pygame.image.load("images/grass.png")
                     weed.set_colorkey(WHITE)
                     self.screen.blit(weed, (20 + count_c, coord_y_0_1 + 30))
                 if plant.illness:
@@ -951,7 +951,7 @@ class App:
                     carrot.set_colorkey(WHITE)
                     self.screen.blit(carrot, (20 + count_c, coord_y_0_1- 50))
                 if plant.weed:
-                    weed = pygame.image.load("images/trava.png")
+                    weed = pygame.image.load("images/grass.png")
                     weed.set_colorkey(WHITE)
                     self.screen.blit(weed, (20 + count_c, coord_y_0_1 + 35))
                 if plant.illness:
