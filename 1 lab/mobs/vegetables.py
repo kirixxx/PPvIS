@@ -1,7 +1,8 @@
-from abstraction.abstract_plant import AbstactPlant
+from abstraction.abstract_plant import AbstractPlant
+from abstraction.abstract_main import AbstractMain
 import random
 
-class Carrot(AbstactPlant):
+class Carrot(AbstractMain, AbstractPlant):
     def __init__(self, coordinates: tuple, garden):
         super().__init__(garden)
         self.index = 0
@@ -67,6 +68,23 @@ class Carrot(AbstactPlant):
         else:
             self.life_points -= 10  #если растение уже было полито (watered == True), то отнимаем 10 хп
         return self
-    
-    def attack_plant(self):
-        return super().attack_plant()
+
+    def grow(self, plant, garden):
+        if garden.weather.weather_par == "sun":
+            plant = plant.get_rid_of_illness_check()
+            plant = plant.grow_up(garden.count_of_days)
+        if garden.weather.weather_par == "rain":
+            plant = plant.get_illness_check()
+            plant = plant.grow_up(garden.count_of_days)
+        if garden.weather.weather_par == "drought":
+            if not plant.watered:
+                plant.life_points -= 10
+            if plant.watered:
+                plant = plant.grow_up(garden.count_of_days)
+        if plant is not None:
+            garden.harvest_of_vegetables += 1
+            garden.plants.remove(plant)
+            plant.get_position()
+            x = int(plant.coordinates[0])
+            y = int(plant.coordinates[1])
+            garden.game_map[x][y].remove_smth_from_cell(plant)

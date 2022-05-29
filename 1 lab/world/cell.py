@@ -1,5 +1,5 @@
 from abstraction.abstract_cell import AbstractCell
-from abstraction.abstract_plant import AbstactPlant
+from abstraction.abstract_main import AbstractMain
 
 class Cell(AbstractCell):
         def __init__(self, coordinates: tuple):
@@ -49,7 +49,7 @@ class Cell(AbstractCell):
                 else:
                     count += 1
 
-        def remove_smth_from_cell(self, smth: AbstactPlant):
+        def remove_smth_from_cell(self, smth: AbstractMain):
             for i in  self.all_in_cell:
                 if i.index ==  smth.index:
                     self.all_in_cell.remove(i)

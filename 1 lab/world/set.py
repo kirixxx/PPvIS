@@ -38,16 +38,16 @@ class Sert():
                             garden.getting_weed()
                 garden.step_print()
             elif command == "add_plant":
-                garden.add_plant_on_game_map()
+                garden.add_obj_on_game_map('carrot')
                 garden.step_print()
             elif command == "help":
                 garden.fertilizing_game_map()
                 garden.step_print()
             elif command == "add_tree":
-                garden.add_trees_on_game_map()
+                garden.add_obj_on_game_map('tree')
                 garden.step_print()
             elif command == "add_pests":
-                garden.add_pests_on_game_map()
+                garden.add_obj_on_game_map('pest')
                 garden.step_print()
             elif command == "water_plants":
                 garden.watering_in_map()

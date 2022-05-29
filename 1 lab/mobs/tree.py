@@ -1,7 +1,8 @@
-from abstraction.abstract_plant import AbstactPlant
+from abstraction.abstract_plant import AbstractPlant
+from abstraction.abstract_main import AbstractMain
 import random
 
-class Tree(AbstactPlant):
+class Tree(AbstractMain, AbstractPlant):
     def __init__(self, coordinates, garden):
         super().__init__(garden)
         self.index = 0
@@ -64,5 +65,17 @@ class Tree(AbstactPlant):
         self.watered = True
         return self
     
-    def attack_plant(self):
-        return super().attack_plant()
+    def grow(self, tree, garden):
+        if garden.weather.weather_par == "sun":
+            tree = tree.get_rid_of_illness_check()
+            tree = tree.grow_up(garden.count_of_days)
+        if garden.weather.weather_par == "rain":
+            tree = tree.get_illness_check()
+            tree = tree.grow_up(garden.count_of_days)
+        if garden.weather.weather_par == "drought":
+            if not tree.watered:
+                tree.life_points -= 20
+            if tree.watered:
+                tree = tree.grow_up(garden.count_of_days)
+            if tree is not None:
+                    garden.harvest_of_apples += 1    

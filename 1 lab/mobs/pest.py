@@ -1,6 +1,7 @@
-from abstraction.abstract_plant import AbstactPlant
+from abstraction.abstract_main import AbstractMain
+from abstraction.abstract_pest import AbstractPest
 
-class Pest(AbstactPlant):
+class Pest(AbstractMain, AbstractPest):
     def __init__(self, coordinates: tuple, garden):
         super().__init__(garden)
         self.index = 0
@@ -48,15 +49,3 @@ class Pest(AbstactPlant):
             return self
         else:
             return None
-        
-    def grow_up(self):
-        return super().grow_up()
-    
-    def get_illness_check(self):
-        return super().get_illness_check()
-    
-    def get_rid_of_illness_check(self):
-        return super().get_rid_of_illness_check()
-    
-    def water(self):
-        return super().water()

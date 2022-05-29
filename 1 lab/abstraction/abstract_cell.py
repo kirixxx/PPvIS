@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from abstraction.abstract_plant import AbstactPlant
+from abstraction.abstract_main import AbstractMain
 class AbstractCell(ABC):
     def __init__(self):
         coordinates = tuple()
@@ -32,5 +32,5 @@ class AbstractCell(ABC):
         pass
     
     @abstractmethod
-    def remove_smth_from_cell(self, smth: AbstactPlant):
+    def remove_smth_from_cell(self, smth: AbstractMain):
         pass
